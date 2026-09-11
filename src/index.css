@@ -9,6 +9,10 @@
   font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', system-ui, sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: #f8fafc;

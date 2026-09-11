@@ -152,7 +152,7 @@ export function ApiKeySettingsModal({
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-slate-900 border border-slate-800 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative overflow-hidden flex flex-col max-h-[90vh]"
+        className="bg-slate-900 border border-slate-800 rounded-3xl max-w-2xl w-full max-h-[calc(100dvh-2rem)] p-4 sm:p-8 shadow-2xl relative overflow-hidden flex flex-col"
       >
         {/* Glow Effects */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -160,7 +160,7 @@ export function ApiKeySettingsModal({
 
         {/* Header */}
         <div className="flex items-start justify-between pb-5 border-b border-slate-800">
-          <div className="flex items-center space-x-3">
+          <div className="flex items-start min-w-0 space-x-3">
             <div className="p-3 bg-blue-950/80 border border-blue-800/80 rounded-2xl text-blue-400">
               <Key className="w-6 h-6" />
             </div>

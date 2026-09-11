@@ -183,11 +183,11 @@ Flashcards: ${studyPack.flashcards?.map((f) => `Front: ${f.front} -> Back: ${f.b
   ];
 
   return (
-    <div className="bg-white rounded-2xl border border-blue-200/80 shadow-md overflow-hidden flex flex-col h-[700px] max-h-[85vh] animate-in fade-in duration-200">
+    <div className="bg-white rounded-2xl border border-blue-200/80 shadow-md overflow-hidden flex flex-col h-[clamp(34rem,700px,85dvh)] max-h-[85dvh] min-w-0 animate-in fade-in duration-200">
       {/* Top Banner & Grounding Scope Indicator */}
       <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 p-4 sm:p-5 text-slate-100 flex-shrink-0 border-b border-blue-800/80">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div className="flex items-center space-x-3">
+          <div className="flex items-start min-w-0 space-x-3">
             <div className="w-10 h-10 rounded-xl bg-blue-600/90 border border-blue-400/40 flex items-center justify-center text-white shadow-md flex-shrink-0">
               <Bot className="w-6 h-6 text-sky-200" />
             </div>
@@ -256,7 +256,7 @@ Flashcards: ${studyPack.flashcards?.map((f) => `Front: ${f.front} -> Back: ${f.b
               </div>
 
               {/* Message Content Bubble */}
-              <div className={`max-w-[85%] sm:max-w-[78%] space-y-1 ${isUser ? 'items-end' : 'items-start'}`}>
+              <div className={`min-w-0 max-w-[calc(100%-2.75rem)] sm:max-w-[78%] space-y-1 ${isUser ? 'items-end' : 'items-start'}`}>
                 <div
                   className={`p-3.5 sm:p-4 rounded-2xl text-xs sm:text-sm leading-relaxed shadow-xs transition-all ${
                     isUser
@@ -289,7 +289,7 @@ Flashcards: ${studyPack.flashcards?.map((f) => `Front: ${f.front} -> Back: ${f.b
                         <span>Trích dẫn: Kho Nguồn & Study Pack bài {topic.title}</span>
                       </span>
 
-                      <div className="flex items-center space-x-2">
+<div className="flex flex-wrap items-center gap-x-2 gap-y-1 min-w-0">
                         <button
                           onClick={() => handleCopy(msg.id, msg.text)}
                           className="hover:text-blue-800 p-1 rounded hover:bg-slate-100 transition-colors"
@@ -374,7 +374,7 @@ Flashcards: ${studyPack.flashcards?.map((f) => `Front: ${f.front} -> Back: ${f.b
             e.preventDefault();
             handleSendMessage();
           }}
-          className="flex items-center space-x-2"
+className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2"
         >
           <input
             type="text"
@@ -382,7 +382,7 @@ Flashcards: ${studyPack.flashcards?.map((f) => `Front: ${f.front} -> Back: ${f.b
             onChange={(e) => setInputQuestion(e.target.value)}
             placeholder={`Hỏi bất kỳ điều gì về bài "${topic.title}" (AI sẽ chỉ trả lời trong tài liệu)...`}
             disabled={isLoading}
-            className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition-all"
+            className="min-w-0 flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition-all"
           />
           <button
             type="submit"

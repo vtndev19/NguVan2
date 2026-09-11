@@ -164,7 +164,7 @@ export function Navbar({
   return (
     <header className="sticky top-0 z-40 bg-slate-950 border-b border-blue-900/70 text-slate-100 shadow-lg">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between min-w-0 h-16 gap-1.5 sm:gap-2">
+        <div className="flex items-center justify-between min-w-0 h-16 gap-1.5 sm:gap-2 overflow-hidden">
           {/* Brand & Topic Selector */}
           <div className="flex items-center min-w-0 space-x-2 sm:space-x-3">
 <div className="flex items-center min-w-0 space-x-2">
@@ -186,10 +186,10 @@ export function Navbar({
               <button
                 type="button"
                 onClick={() => setShowTopicMenu(!showTopicMenu)}
-                className="flex items-center space-x-1.5 bg-blue-950/80 hover:bg-blue-900 border border-blue-800 hover:border-sky-400/60 rounded-lg px-2 py-1.5 text-xs sm:text-sm text-slate-100 transition-all min-w-0 w-[min(42vw,220px)] sm:w-[min(28vw,220px)]"
+                className="flex items-center gap-1.5 bg-blue-950/80 hover:bg-blue-900 border border-blue-800 hover:border-sky-400/60 rounded-lg px-2 py-1.5 text-xs sm:text-sm text-slate-100 transition-all min-w-0 w-[min(42vw,220px)] sm:w-[min(28vw,220px)] max-w-full overflow-hidden"
               >
                 <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-sky-400 flex-shrink-0" />
-                <span className="font-medium truncate">
+                <span className="min-w-0 flex-1 truncate whitespace-nowrap text-left">
                   {activeTopic ? activeTopic.title : 'Chọn chủ đề'}
                 </span>
                 <ChevronDown className="w-3.5 h-3.5 text-sky-300 flex-shrink-0" />

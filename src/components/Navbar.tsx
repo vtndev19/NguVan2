@@ -164,10 +164,10 @@ export function Navbar({
   return (
     <header className="sticky top-0 z-40 bg-slate-950 border-b border-blue-900/70 text-slate-100 shadow-lg">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 gap-2">
+        <div className="flex items-center justify-between min-w-0 h-16 gap-2">
           {/* Brand & Topic Selector */}
-          <div className="flex items-center space-x-2 sm:space-x-3">
-            <div className="flex items-center space-x-2">
+          <div className="flex items-center min-w-0 space-x-2 sm:space-x-3">
+<div className="flex items-center min-w-0 space-x-2">
               <div className="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-md shadow-blue-500/20 flex-shrink-0">
                 10
               </div>
@@ -182,7 +182,7 @@ export function Navbar({
             </div>
 
             {/* Topic Switcher Dropdown */}
-            <div className="relative">
+            <div className="relative min-w-0">
               <button
                 type="button"
                 onClick={() => setShowTopicMenu(!showTopicMenu)}
@@ -196,7 +196,7 @@ export function Navbar({
               </button>
 
               {showTopicMenu && (
-                <div className="absolute left-0 mt-2 w-72 bg-slate-900 border border-blue-800 rounded-xl shadow-2xl py-2 z-50 animate-in fade-in zoom-in-95">
+                <div className="absolute left-0 mt-2 w-[min(18rem,calc(100vw-1.5rem))] bg-slate-900 border border-blue-800 rounded-xl shadow-2xl py-2 z-50 animate-in fade-in zoom-in-95">
                   <div className="px-3 py-1.5 text-xs font-semibold text-sky-400 uppercase tracking-wider border-b border-blue-900 flex justify-between items-center">
                     <span>Chủ đề Ngữ văn ({topics.length})</span>
                     <button
@@ -486,7 +486,7 @@ export function Navbar({
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-medium text-stone-400 mb-1">Tác giả</label>
                   <input
@@ -515,7 +515,7 @@ export function Navbar({
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-medium text-stone-400 mb-1">Thể loại</label>
                   <input

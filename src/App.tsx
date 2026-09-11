@@ -148,7 +148,7 @@ export default function App() {
       )}
 
       {/* Main Content Area */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <main className="flex-1 min-w-0 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
         {currentStage === 'buoi1' && (
           <Buoi1Stage
             topic={activeTopic}
@@ -192,7 +192,7 @@ export default function App() {
         {currentStage === 'chatbot' && activeTopic && (
           <div className="space-y-6 animate-in fade-in duration-300">
             {/* Header Banner */}
-            <div className="bg-slate-900 rounded-2xl p-6 text-slate-100 shadow-xl border border-blue-900 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="bg-slate-900 rounded-2xl p-4 sm:p-6 text-slate-100 shadow-xl border border-blue-900 flex flex-col md:flex-row md:items-center justify-between gap-4 min-w-0">
               <div className="space-y-1">
                 <div className="flex items-center space-x-2">
                   <span className="px-3 py-0.5 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center space-x-1">
@@ -236,7 +236,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="border-t border-blue-200/80 bg-white/90 py-6 mt-12 text-center text-xs text-slate-600">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="font-semibold text-slate-700">
             <strong className="text-blue-900">Ngữ Văn 10</strong> — Nền tảng ôn tập môn Ngữ văn Lớp 10 thông minh tuân thủ chuẩn mực UNESCO AI Competencies.
           </p>

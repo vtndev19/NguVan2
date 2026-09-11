@@ -1,0 +1,6 @@
+{
+  "name": "Ngữ Văn 10",
+  "description": "Nền tảng ôn tập cá nhân môn Ngữ văn Lớp 10 ứng dụng AI với kiến trúc 3 giai đoạn. Đối tượng tiếp cận: Học sinh Lớp 10 (Chương trình GDPT 2018). Tích hợp sơ đồ kiến trúc, đặc tả SRS và CSDL LocalStorage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

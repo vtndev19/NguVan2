@@ -164,7 +164,7 @@ export function Navbar({
   return (
     <header className="sticky top-0 z-40 bg-slate-950 border-b border-blue-900/70 text-slate-100 shadow-lg">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between min-w-0 h-16 gap-2">
+        <div className="flex items-center justify-between min-w-0 h-16 gap-1.5 sm:gap-2">
           {/* Brand & Topic Selector */}
           <div className="flex items-center min-w-0 space-x-2 sm:space-x-3">
 <div className="flex items-center min-w-0 space-x-2">
@@ -186,7 +186,7 @@ export function Navbar({
               <button
                 type="button"
                 onClick={() => setShowTopicMenu(!showTopicMenu)}
-                className="flex items-center space-x-1.5 bg-blue-950/80 hover:bg-blue-900 border border-blue-800 hover:border-sky-400/60 rounded-lg px-2.5 py-1.5 text-xs sm:text-sm text-slate-100 transition-all max-w-[150px] sm:max-w-[220px]"
+                className="flex items-center space-x-1.5 bg-blue-950/80 hover:bg-blue-900 border border-blue-800 hover:border-sky-400/60 rounded-lg px-2 py-1.5 text-xs sm:text-sm text-slate-100 transition-all min-w-0 w-[min(42vw,220px)] sm:w-[min(28vw,220px)]"
               >
                 <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-sky-400 flex-shrink-0" />
                 <span className="font-medium truncate">
@@ -285,7 +285,7 @@ export function Navbar({
           </nav>
 
           {/* Storage & Tools Controls */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1.5 sm:space-x-2 flex-shrink-0">
             {/* Gemini API Key Settings Button */}
             {onOpenApiKeyModal && (
               <button
@@ -298,7 +298,7 @@ export function Navbar({
                 title="Cấu hình Gemini API Key cá nhân (Local-Only Round 5)"
               >
                 <Key className="w-3.5 h-3.5 text-blue-400" />
-                <span className="hidden sm:inline">
+                <span className="hidden xl:inline whitespace-nowrap">
                   {storage.hasLocalApiKey() ? 'API Key: Active' : 'Cài Key Gemini'}
                 </span>
               </button>
@@ -332,7 +332,7 @@ export function Navbar({
               title="Lưu hoặc mở bản sao working copy (Tác phẩm, Nguồn, AI Preview, Study Pack)"
             >
               <HardDrive className="w-3.5 h-3.5 text-emerald-200" />
-              <span className="hidden sm:inline">Save/Load Môn</span>
+              <span className="hidden xl:inline whitespace-nowrap">Save/Load Môn</span>
             </button>
 
             {/* LocalStorage Inspector Trigger */}
@@ -342,7 +342,7 @@ export function Navbar({
               title="Quản lý dữ liệu LocalStorage"
             >
               <Database className="w-3.5 h-3.5 text-sky-400" />
-              <span className="hidden sm:inline">Data:</span>
+              <span className="hidden xl:inline">Data:</span>
               <span className="font-mono text-sky-300 font-semibold">{dbStats.formattedSize}</span>
             </button>
 
